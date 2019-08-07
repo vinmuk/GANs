@@ -78,7 +78,7 @@ class SAGAN():
         gamma = K.variable(value=0)
         ret = Lambda(lambda x: x*gamma)(o)
         ret = Add()([ret, x])
-        return o
+        return ret
 
     def build_generator(self):
         noise = Input(shape=(self.latent_dim,))
